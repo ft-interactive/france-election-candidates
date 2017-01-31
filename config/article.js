@@ -42,10 +42,10 @@ export default () => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: 'France presidential election candidates',
+  title: 'France presidential election candidates: Fillon, Le Pen, Macron, Hamon, Bayrou, Melenchon',
 
   // meta data
-  description: 'The FT guide to the 2017 French election candidates: Fillon, Le Pen, Valls, Macron, Hamon, Bayrou, Melenchon.',
+  description: 'The FT guide to the 2017 French election candidates',
 
   /*
   TODO: Select Twitter card type -
