@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% from "components/card/template.html" import Card -%}
+
+{% block article_body %}
+
+<!-- <figure class="graphic graphic-b-1 graphic-pad-1">
+  <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2F867b4c1e-b627-11e6-961e-a1acd97f622d?source=next&fit=scale-down&width=700"></img>
+    <figcaption class="o-typography-caption"></figcaption>
+</figure>-->
+
+<p>France will elect a new president with voting in April and May, in what is set to be an unpredictable and closely fought battle between traditional and ‘outsider’ candidates.</p>
+
+<p>This is the FT’s guide to the contenders.</p>
+
+<p>Click the &ldquo;Follow&rdquo; buttons to add the candidate to <a href="https://www.ft.com/myft/following/">MyFT</a> and receive alerts about their presidential bid.</p>
+
+{# repeating card section starts #}
+{% for item in cards.selected %}
+{{ Card(item) }}
+{% endfor %}
+{# repeating card section ends #}
+
+{% if cards.unfilled.length > 0 %}
+<h1>Positions that have yet to be filled</h1>
+{% endif %}
+
+{# repeating card section starts #}
+{% for item in cards.unfilled %}
+{{ Card(item) }}
+{% endfor %}
+{# repeating card section ends #}
+
+{% endblock %}
