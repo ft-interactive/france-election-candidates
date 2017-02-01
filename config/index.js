@@ -1,10 +1,12 @@
 import article from './article';
 import getFlags from './flags';
 import axios from 'axios';
+import getOnwardJourney from './onward-journey';
 
 export default async function() {
   const d = await article();
   const flags = await getFlags();
+  const onwardJourney = await getOnwardJourney();
   const endpoint = 'http://bertha.ig.ft.com/view/publish/gss/1wHzYJRo77uEr51WIOMeimnHfWkYzfvY_DF-QAylO1-k/data';
   const cards = {};
   let data;
@@ -42,5 +44,6 @@ export default async function() {
     ...d,
     cards,
     flags,
+    onwardJourney,
   };
 }
